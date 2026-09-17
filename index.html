@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Vault | Curated Retro & Classic PC Games</title>
+  <meta name="description" content="A handpicked archive of classic PC gaming masterpieces, preserved and ready for direct download.">
+  
+  <!-- Google Fonts: IBM Plex Sans Arabic & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <!-- Ambient Subtle Background Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Main Site Container -->
+  <div class="site-wrapper">
+    
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="header-top">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="3"></rect>
+              <path d="M6 12h4m-2-2v4"></path>
+              <circle cx="15" cy="11" r="1"></circle>
+              <circle cx="18" cy="13" r="1"></circle>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1 class="site-title">Retro Vault</h1>
+            <p class="site-subtitle" data-i18n="subtitle">Curated Retro & Classic PC Games</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <button id="langToggle" class="btn-ghost" title="تغيير اللغة / Switch Language" aria-label="Switch Language / تبديل اللغة">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="langLabel">العربية</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2 class="hero-headline" data-i18n="heroHeadline">Relive the Golden Age of PC Gaming</h2>
+          <p class="hero-desc" data-i18n="heroDesc">
+            A handpicked archive of classic PC gaming masterpieces, preserved and ready for direct download.
+          </p>
+        </div>
+      </section>
+
+      <!-- Search Controls Bar -->
+      <div class="controls-bar">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search games by title..." 
+            data-i18n-placeholder="searchPlaceholder"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button id="clearSearchBtn" class="clear-btn" aria-label="Clear search" style="display: none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content: Games Grid -->
+    <main class="main-content">
+
+      <!-- Games Grid -->
+      <section class="games-grid" id="gamesGrid" aria-live="polite">
+        <!-- Rendered dynamically by JavaScript -->
+      </section>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
+        <h3 data-i18n="emptyTitle">No games found</h3>
+        <p data-i18n="emptyDesc">Try searching with different keywords.</p>
+        <button id="resetFilterBtn" class="btn-secondary" data-i18n="resetFilters">View all games</button>
+      </div>
+    </main>
+
+    <!-- Simple, Quiet Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-brand">
+            Retro Vault
+          </div>
+          <p class="footer-copy" data-i18n="footerCopy">
+            A dedicated vault preserving digital retro gaming heritage. All game rights belong to their respective creators.
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <span class="footer-year">© 2026 MAG AI</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Minimalist Download Modal -->
+  <div class="modal-backdrop" id="gameModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <img id="modalGameImg" src="" alt="" class="modal-art">
+        <div class="modal-titles">
+          <h2 id="modalGameTitle" class="modal-title">Game Title</h2>
+          <div class="modal-meta-row">
+            <span id="modalGamePlatform">Platform</span>
+            <span class="meta-dot">•</span>
+            <span id="modalGameYear">Year</span>
+            <span class="meta-dot">•</span>
+            <span id="modalGameSize">Size</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p id="modalGameDesc" class="modal-desc"></p>
+
+        <!-- Download Action -->
+        <div class="download-action-box">
+          <div class="download-status-bar" id="downloadStatusBar" style="display: none;">
+            <div class="progress-info">
+              <span id="downloadStatusText" data-i18n="preparing">Preparing download archive...</span>
+              <span id="downloadPercent">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="modalDownloadBtn" class="btn-primary-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span id="modalDownloadBtnText" data-i18n="startDownload">Direct Download</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="assertive">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastMessage">تم بنجاح!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

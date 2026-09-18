@@ -12,5 +12,19 @@
     "supportedOS": "Windows 7, 8, 10, 11",
     "image": "https://share.google/9kbEJs0BjX2gKyXsm",
     "downloadUrl": "https://archive.org/download/medal-of-honor_202609/%E2%80%8F%E2%80%8FMedal%20Of%20Honor.rar"
+  },
+  {
+    "id": "spider-man",
+    "title_en": "Spider Man",
+    "title_ar": "سبايدر مان",
+    "description_en": "Set in the Marvel universe, players control the superhero Spider-Man as he swings between the skyscrapers of New York City using his web-shooters, fights villains, and saves the city from various plots and crises orchestrated by famous supervillains from Marvel comic books.",
+    "description_ar": "تدور أحداث اللعبة في عالم مارفل، حيث يتحكم اللاعب بشخصية البطل الخارق سبايدر مان للتنقل بين ناطحات السحاب في مدينة نيويورك باستخدام خيوطه العنكبوتية، محاربة الأشرار، وإنقاذ المدينة من المؤامرات والأزمات المختلفة التي تقودها شخصيات شريرة شهيرة.",
+    "releaseYear": "2001",
+    "developer_en": "Neversoft",
+    "developer_ar": "نيفيرسوفت",
+    "fileSize": "115 MB",
+    "supportedOS": "Windows 7, 8, 10, 11",
+    "image": "https://i.ebayimg.com/images/g/kGAAAOSwm8VUylwa/s-l960.webp",
+    "downloadUrl": "https://archive.org/download/spidey-pc_202609/SpideyPC.rar"
   }
 ]
